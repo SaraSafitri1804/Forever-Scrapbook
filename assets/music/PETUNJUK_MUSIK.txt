@@ -1,0 +1,11 @@
+=== CARA MEMASUKKAN LAGU / MUSIK ===
+
+File lagumu sudah terpasang dan siap diputar!
+
+Jika nanti ingin mengganti lagunya dengan lagu lain:
+1. Siapkan file lagu baru (format .mp3 atau .m4a).
+2. Simpan di folder ini (Forever Scrapbook/assets/music/).
+3. Beri nama:
+   lagu.mp3   (atau lagu.m4a)
+
+Saat piringan vinyl di halaman "Surprise & Music Hub" diklik, lagu akan otomatis diputar dan tetap terdengar meskipun berpindah ke halaman lain!

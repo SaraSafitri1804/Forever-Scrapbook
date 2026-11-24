@@ -1,0 +1,22 @@
+=== CARA MEMASUKKAN FOTO KENANGAN ===
+
+Kamu bisa mengganti foto-foto dengan 2 cara mudah:
+
+CARA 1 (Paling Praktis):
+Ganti langsung di website!
+Kamu bisa klik tombol "Ganti Foto" / klik foto di website untuk langsung memilih foto dari HP atau laptopmu. Foto akan otomatis tersimpan di browsermu!
+
+CARA 2 (Melalui Folder ini):
+Simpan foto-fotomu di dalam folder ini (Forever Scrapbook/assets/photos/) dengan nama file berikut:
+- cover.jpg          -> Foto sampul couple di halaman depan
+- day_one.jpg        -> Foto polaroid "Hari Pertama" (First Picture)
+- first_coffee.jpg   -> Foto polaroid "Kopi Pertama" (First Picture)
+- golden_hour.jpg    -> Foto polaroid "Senja Indah" (First Picture)
+- favorite_day.jpg   -> Foto polaroid "Hari Favorit Kita" (Music Hub)
+- travel_island.jpg  -> Foto "Berperahu di Pulau" (Our Memories Travel)
+- travel_ocean.jpg   -> Foto "Tepi Pantai Indah" (Our Memories Travel)
+- travel_cafe.jpg    -> Foto "Kafe Pagi Hari" (Our Memories Travel)
+- memory_coastal.jpg -> Foto "Liburan ke Pantai" (Our Memories)
+- memory_afternoon.jpg -> Foto "Sore Favorit Kita" (Our Memories)
+- memory_sunset.jpg  -> Foto "Jalan Sore Saat Senja" (Our Memories)
+- why_love.jpg       -> Foto polaroid di halaman "Alasan Aku Mencintaimu"

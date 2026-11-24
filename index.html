@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun — Forever Scrapbook</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #253B6E;
+    }
+    #app-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Persistent Global Audio Player -->
+  <audio id="global-music" preload="auto" loop>
+    <source src="assets/music/lagu.m4a" type="audio/mp4">
+    <source src="assets/music/lagu.mp3" type="audio/mp4">
+    <source src="assets/music/lagu.mp3" type="audio/mpeg">
+    <source src="assets/music/lagu.mp3">
+  </audio>
+  
+  <!-- Seamless Application Viewport -->
+  <iframe id="app-frame" src="happy_anniversary_cover/code.html" allow="autoplay"></iframe>
+
+  <script>
+    (function() {
+      var audio = document.getElementById('global-music');
+      var frame = document.getElementById('app-frame');
+
+      function broadcastState(isPlaying) {
+        try {
+          if (frame && frame.contentWindow) {
+            frame.contentWindow.postMessage({
+              type: 'MUSIC_STATE_UPDATE',
+              playing: isPlaying,
+              currentTime: audio.currentTime
+            }, '*');
+          }
+        } catch(e) {}
+      }
+
+      // Handle messages from any page inside the iframe
+      window.addEventListener('message', function(event) {
+        if (!event.data || typeof event.data !== 'object') return;
+
+        if (event.data.type === 'UNLOCK_AUDIO') {
+          // Pre-load audio on user gesture (e.g. clicking START on cover)
+          audio.load();
+        } else if (event.data.type === 'TOGGLE_MUSIC') {
+          if (audio.paused) {
+            var playPromise = audio.play();
+            if (playPromise !== undefined) {
+              playPromise.then(function() {
+                broadcastState(true);
+              }).catch(function(err) {
+                console.log('Parent play failed, telling iframe to fallback:', err);
+                // Fallback to iframe local audio if browser blocked parent play
+                if (frame && frame.contentWindow) {
+                  frame.contentWindow.postMessage({ type: 'FALLBACK_LOCAL_PLAY' }, '*');
+                }
+              });
+            }
+          } else {
+            audio.pause();
+            broadcastState(false);
+          }
+        } else if (event.data.type === 'PLAY_MUSIC') {
+          audio.play().then(function() { broadcastState(true); });
+        } else if (event.data.type === 'PAUSE_MUSIC') {
+          audio.pause();
+          broadcastState(false);
+        } else if (event.data.type === 'GET_MUSIC_STATE') {
+          broadcastState(!audio.paused);
+        }
+      });
+
+      frame.addEventListener('load', function() {
+        broadcastState(!audio.paused);
+      });
+
+      audio.addEventListener('play', function() { broadcastState(true); });
+      audio.addEventListener('pause', function() { broadcastState(false); });
+    })();
+  </script>
+</body>
+</html>

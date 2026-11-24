@@ -1,0 +1,21 @@
+=== CARA MEMASUKKAN & MENGGANTI STIKER ===
+
+Kamu bisa mengganti stiker-stiker dekorasi dengan 2 cara:
+
+CARA 1: Langsung Klik Stiker di Website (Paling Praktis)
+- Saat membuka website, cukup KLIK pada stiker mana saja yang ingin kamu ganti (misal stiker kucing lucu, stiker mawar, stiker kamera, dsb).
+- Pilih gambar stiker baru dari laptop/HP-mu (disarankan format PNG dengan latar belakang transparan).
+- Stiker akan langsung terganti dan otomatis tersimpan di browser!
+
+CARA 2: Melalui Folder ini (assets/stickers/)
+Kamu bisa menyimpan file stiker dekorasimu di dalam folder ini dengan nama-nama file berikut:
+- kucing_pesta.png   -> Stiker Kucing Topi Pesta di halaman Surprise Stickers
+- bunga_mawar.png    -> Stiker Mawar Merah di halaman Cover & First Picture
+- kamera.png         -> Stiker Kamera di halaman Surprise Stickers & Music Hub
+- buket_bunga.png    -> Stiker Buket Bunga di halaman Surprise Stickers
+- kue.png            -> Stiker Kue Ulang Tahun/Anniversary di Surprise Stickers
+- kado.png           -> Stiker Kotak Hadiah di Surprise Stickers
+- vinyl.png          -> Gambar Piringan Vinyl di Music Hub
+
+TIPS:
+Gunakan gambar dengan format PNG (latar belakang transparan) agar stiker terlihat menyatu dan cantik dengan kertas scrapbook!
